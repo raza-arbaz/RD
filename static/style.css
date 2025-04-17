@@ -1,0 +1,23 @@
+body{
+    background-image: url("https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt48c447ba91558bd7/64f15344d98bfbf719ccd1bd/AI_Prostock-studio_Alamy.jpg?width=1280&auto=webp&quality=95&format=jpg&disable=upscale");
+    font-family: Arial; 
+    padding: 20px;
+}
+
+form { 
+    background: rgb(211, 198, 185); 
+    padding: 20px;
+    border-radius: 8px; 
+    max-width: 500px; 
+    margin: auto; 
+}
+input, button { 
+    width: 80%; 
+    margin: 10px 0;
+    padding: 10px; 
+}
+.result { 
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em; 
+}

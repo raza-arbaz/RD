@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ransomware Detection</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<h2 style="text-align: center;">Ransomware Detection</h2>
+<form action="/predict" method="post">
+    <label for="destination_port">Destination Port:</label>
+    <input type="text" name="destination_port" id="destination_port" required><br>
+
+    <label for="flow_duration">Flow Duration:</label>
+    <input type="text" name="flow_duration" id="flow_duration" required><br>
+
+    <label for="total_fwd_packets">Total Fwd Packets:</label>
+    <input type="text" name="total_fwd_packets" id="total_fwd_packets" required><br>
+
+    <label for="total_backward_packets">Total Backward Packets:</label>
+    <input type="text" name="total_backward_packets" id="total_backward_packets" required><br>
+
+    <label for="total_length_fwd_packets">Total Length of Fwd Packets:</label>
+    <input type="text" name="total_length_fwd_packets" id="total_length_fwd_packets" required><br>
+
+    <label for="total_length_bwd_packets">Total Length of Bwd Packets:</label>
+    <input type="text" name="total_length_bwd_packets" id="total_length_bwd_packets" required><br>
+
+    <label for="fwd_packet_length_max">Fwd Packet Length Max:</label>
+    <input type="text" name="fwd_packet_length_max" id="fwd_packet_length_max" required><br>
+
+    <label for="fwd_packet_length_min">Fwd Packet Length Min:</label>
+    <input type="text" name="fwd_packet_length_min" id="fwd_packet_length_min" required><br>
+
+    <label for="fwd_packet_length_mean">Fwd Packet Length Mean:</label>
+    <input type="text" name="fwd_packet_length_mean" id="fwd_packet_length_mean" required><br>
+
+    <label for="fwd_packet_length_std">Fwd Packet Length Std:</label>
+    <input type="text" name="fwd_packet_length_std" id="fwd_packet_length_std" required><br>
+
+    <label for="backward_packet_length_max">Backward Packet Length Max:</label>
+    <input type="text" name="backward_packet_length_max" id="backward_packet_length_max" required><br>
+
+    <label for="backward_packet_length_min">Backward Packet Length Min:</label>
+    <input type="text" name="backward_packet_length_min" id="backward_packet_length_min" required><br>
+
+    <label for="backward_packet_length_mean">Backward Packet Length Mean:</label>
+    <input type="text" name="backward_packet_length_mean" id="backward_packet_length_mean" required><br>
+
+    <label for="backward_packet_length_std">Backward Packet Length Std:</label>
+    <input type="text" name="backward_packet_length_std" id="backward_packet_length_std" required><br>
+
+    <label for="flow_bytes_s">Flow Bytes/s:</label>
+    <input type="text" name="flow_bytes_s" id="flow_bytes_s" required><br>
+
+    <label for="flow_packets_s">Flow Packets/s:</label>
+    <input type="text" name="flow_packets_s" id="flow_packets_s" required><br>
+
+    <label for="flow_iat_mean">Flow IAT Mean:</label>
+    <input type="text" name="flow_iat_mean" id="flow_iat_mean" required><br>
+
+    <label for="flow_iat_std">Flow IAT Std:</label>
+    <input type="text" name="flow_iat_std" id="flow_iat_std" required><br>
+
+    <label for="flow_iat_max">Flow IAT Max:</label>
+    <input type="text" name="flow_iat_max" id="flow_iat_max" required><br>
+
+    <label for="flow_iat_min">Flow IAT Min:</label>
+    <input type="text" name="flow_iat_min" id="flow_iat_min" required><br>
+
+    <button type="submit">Predict</button>
+</form>
+{% if result %}
+<div class="result">{{ result }}</div>
+{% endif %}
+
+</body>
+</html>
